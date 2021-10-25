@@ -1,0 +1,71 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Bordered table</h4>
+    <p class="card-description">
+      Add class <code>.table-bordered</code>
+    </p>
+    <div class="table-responsive pt-3">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>
+              Titre
+            </th>
+            <th>
+              Disponible
+            </th>
+            <th>
+              Prix
+            </th>
+            <th>
+              Description
+            </th>
+            <th>
+
+            </th>
+            <th>
+
+            </th>
+            <th>
+
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let test of tests">
+            <td>
+              {{test.name}}
+            </td>
+            <td>
+              {{test.available}}
+            </td>
+            <td>
+              {{test.price}}
+            </td>
+            <td>
+              {{test.description}}
+            </td>
+
+            <td>
+              <a [routerLink]="['/consult',test.id]">
+                <button type="button" class="btn btn-primary">Consulter</button>
+              </a>
+            </td>
+            <td>
+              <a [routerLink]="['/update',test.id]" >
+                <button type="button" class="btn btn-secondary">Modifier</button>
+              </a>
+            </td>
+            <td>
+              <a href="/">
+                <button type="button" class="btn btn-danger"
+                  (click)="delete(test.id)">Supprimer</button>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

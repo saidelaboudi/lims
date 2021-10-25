@@ -1,0 +1,198 @@
+<div class="container card">
+    <div class="card-body">
+        <h4 class="card-title">Sample form : </h4>
+        <form class="form-sample" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
+            <p class="card-description">
+                *Echantillants
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Unite</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" [(ngModel)]="form.unit.name"
+                                name="name">
+                                <option>g</option>
+                                <option>ml</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Date de
+                            production</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" placeholder="dd/mm/yyyy"
+                                type="date" [(ngModel)]="form.productionDate" name="productionDate">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Date de reception</label>
+                        <div class="col-sm-9">
+                            <input class="form-control"
+                                placeholder="dd/mm/yyyy" type="date"
+                                [(ngModel)]="form.receptionDate" name="receptionDate">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Date d'expiration</label>
+                        <div class="col-sm-9">
+                            <input class="form-control"
+                                placeholder="dd/mm/yyyy" type="date"
+                                [(ngModel)]="form.expirationDate" name="expirationDate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Type</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" [(ngModel)]="form.type"
+                                name="type">
+                                <option>Category1</option>
+                                <option>Category2</option>
+                                <option>Category3</option>
+                                <option>Category4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Confirmer</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" [(ngModel)]="form.confirme"
+                                name="confirme">
+                                <option>Oui</option>
+                                <option>Non</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Conform</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" [(ngModel)]="form.conform"
+                                name="conform">
+                                <option>Oui</option>
+                                <option>Non</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">prix</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required
+                                [(ngModel)]="form.cost" name="cost">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">l'interpretation
+                            du l employee</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required
+                                [(ngModel)]="form.employeeResultInterpretation" name="employeeResultInterpretation">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">l'interpretation
+                            d l admin</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required
+                                [(ngModel)]="form.adminResultInterpretation" name="adminResultInterpretation">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Num d lot</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" required
+                                [(ngModel)]="form.lotNumber" name="lotNumber">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">valeur mesuree</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" required
+                                [(ngModel)]="form.measureValue" name="measureValue">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">min time frame</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" required
+                                [(ngModel)]="form.minTimeFrame" name="minTimeFrame">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">max time frame</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" required
+                                [(ngModel)]="form.maxTimeFrame" name="maxTimeFrame">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">progress</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" required
+                                [(ngModel)]="form.progress" name="progress">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-description">
+                        Container
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Titre</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" required
+                                    [(ngModel)]="form.container.name" name="name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Description</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" required
+                                    [(ngModel)]="form.container.description" name="description">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-secondary mb-2">Add sample</button>
+        </form>
+    </div>
+</div>

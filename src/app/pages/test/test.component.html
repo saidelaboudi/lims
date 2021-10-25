@@ -1,0 +1,122 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div id="invoice">
+                <div class="toolbar hidden-print">
+                    <div class="text-end">
+                        <button type="button" class="btn btn-dark"><i class="fa
+                                fa-print"></i> Print</button>
+                        <button type="button" class="btn btn-danger"><i
+                                class="fa fa-file-pdf-o"></i> Export as PDF</button>
+                    </div>
+                    <hr>
+                </div>
+                <div class="invoice overflow-auto">
+                    <div style="min-width: 600px">
+                        <header>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="javascript:;">
+                                        <img src="assets/images/logo-icon.png"
+                                            width="80" alt="">
+                                    </a>
+                                </div>
+                                <div class="col company-details">
+                                    <h2 class="name">
+                                        <a target="_blank" href="javascript:;">
+                                            Arboshiki
+                                        </a>
+                                    </h2>
+                                    <div>455 Foggy Heights, AZ 85004, US</div>
+                                    <div>(123) 456-789</div>
+                                    <div>company@example.com</div>
+                                </div>
+                            </div>
+                        </header>
+                        <main>
+                            <div class="row contacts">
+                                <div class="col invoice-to">
+                                    <div class="text-gray-light">INVOICE TO:</div>
+                                    <h2 class="to">John Doe</h2>
+                                    <div class="address">796 Silver Harbour, TX
+                                        79273, US</div>
+                                    <div class="email"><a
+                                            href="mailto:john@example.com">john@example.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="col invoice-details">
+                                    <h4 class="invoice-id">Titre : {{test.name}}</h4>
+                                    <h4 class="invoice-id">Description :
+                                        {{test.description}}</h4>
+                                    <h4 class="invoice-id">Disponible :
+                                        {{test.available}}</h4>
+                                    <h4 class="invoice-id">Prix total :
+                                        {{test.price}}</h4>
+                                </div>
+
+                            </div>
+                            <table>
+                                    <th>
+                                        <tr class="text-left"><b>Confirmer : </b></tr>
+                                        <tr class="text-left"><b>Confor : </b></tr>
+                                        <tr class="text-left"><b>valeur mesure : </b></tr>
+                                        <tr class="text-left"><b>min time frame : </b></tr>
+                                        <tr class="text-left"><b>max time frame : </b></tr>
+                                        <tr class="text-left"><b>prix : </b></tr>
+                                        <tr class="text-left"><b>l'interpretation
+                                            de l'employer : </b></tr>
+                                        <tr class="text-left"><b>l'interpretation
+                                            d l admin : </b></tr>
+                                        <tr class="text-left"><b>progress : </b></tr>
+                                        <tr class="text-left"><b>date de
+                                            production : </b></tr>
+                                        <tr class="text-left"><b>date de reception : </b></tr>
+                                        <tr class="text-left"><b>date d'expiration : </b></tr>
+                                        <tr class="text-left"><b>numero du lot : </b></tr>
+                                        <tr class="text-left"><b>type : </b></tr>
+                                        <tr class="text-left"><b>l'unite : </b></tr>
+                                    </th>
+                                
+                                    <th *ngFor="let sample of test.samples">
+                                        <tr class="text-left">{{sample.confirme}}</tr>
+                                        <tr class="text-left">{{sample.conform}}</tr>
+                                        <tr class="text-left">{{sample.measureValue}}</tr>
+                                        <tr class="text-left">{{sample.minTimeFrame}}</tr>
+                                        <tr class="text-left">{{sample.maxTimeFrame}}</tr>
+                                        <tr class="text-left">{{sample.price}}</tr>
+                                        <tr class="text-left">{{sample.employeeResultInterpretation}}</tr>
+                                        <tr class="text-left">{{sample.adminResultInterpretation}}</tr>
+                                        <tr class="text-left">{{sample.progress}}</tr>
+                                        <tr class="text-left">{{sample.productionDate}}</tr>
+                                        <tr class="text-left">{{sample.receptionDate}}</tr>
+                                        <tr class="text-left">{{sample.expirationDate}}</tr>
+                                        <tr class="text-left">{{sample.lotNumber}}</tr>
+                                        <tr class="text-left">{{sample.type.name}}</tr>
+                                        <tr class="text-left">{{sample.unit.name}}</tr>
+                                    </th>
+
+
+
+                                <tfoot>
+
+                                </tfoot>
+                            </table>
+
+                            <div class="notices">
+                                <div>NOTICE:</div>
+                                <div class="notice">A finance charge of 1.5%
+                                    will be made on unpaid balances after 30
+                                    days.</div>
+                            </div>
+                        </main>
+                        <footer>Invoice was created on a computer and is valid
+                            without the signature and seal.</footer>
+                    </div>
+                    <!--DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom-->
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

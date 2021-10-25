@@ -27,9 +27,20 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/vendors/feather/feather.css",
+              "src/vendors/ti-icons/css/themify-icons.css",
+              "src/vendors/css/vendor.bundle.base.css",
+              "src/vendors/datatables.net-bs4/dataTables.bootstrap4.css",
+              "src/vendors/ti-icons/css/themify-icons.css",
+              "src/js/select.dataTables.min.css",
+              "src/css/vertical-layout-light/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/keycloak-js/dist/keycloak.min.js" ,
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {

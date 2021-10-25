@@ -1,0 +1,64 @@
+
+
+
+
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Table with contextual classes</h4>
+    <p class="card-description">
+      Add class <code>.table-</code>
+    </p>
+    <div class="table-responsive pt-3">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>
+              Titre
+            </th>
+            <th>
+              measurment
+            </th>
+            <th>
+              minVolume
+            </th>
+            <th>
+              Stability info
+            </th>
+            <th>
+              description
+            </th>
+            <th>
+              Unite
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr class="table-primary" *ngFor="let type of data.sampleTypes">
+            <td>
+              {{type.name}}
+            </td>
+            <td>
+              {{type.measurment}}
+            </td>
+            <td>
+              {{type.minVolume}}
+            </td>
+            <td>
+              {{type.stabilityInfo}}
+            </td>
+            <td>
+              {{type.description}}
+            </td>
+            <td>
+              {{type.unit.name}}
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
